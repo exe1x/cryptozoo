@@ -18,7 +18,7 @@ body {
 }
 
 header {
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 20px;
     text-align: center;
 }
@@ -73,9 +73,11 @@ h1 {
     transition: transform 0.3s ease;
 }
 #animal3 {
-    top: 76vh;
-    left: 50vw;
-    transform: translate(-50%, -50%);
+    top: 57vh;
+    left: 40vw;
+}
+#animal3:hover {
+    transform: scale(1.1);
 }
 
 /* Animal 4 */
