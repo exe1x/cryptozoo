@@ -6,6 +6,14 @@
     <title>Me At The Zoo</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="zoo.png" type="image/png">
+
+    <script>
+        // Function to open links in a pop-up window
+        function openPopup(url) {
+            window.open(url, 'popup', 'width=600,height=600,scrollbars=yes,resizable=yes');
+            return false;  // Prevent default link behavior
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -13,29 +21,40 @@
     </header>
 
     <div class="zoo-container">
-        <!-- Add the crypto animals here -->
-        <a href="https://en.wikipedia.org/wiki/Moo_Deng" class="animal" id="animal1">
+        <!-- Moo Deng -->
+        <a href="https://en.wikipedia.org/wiki/Moo_Deng" class="animal" id="animal1" onclick="return openPopup('https://en.wikipedia.org/wiki/Moo_Deng');">
             <img src="moodeng.png" alt="Crypto Animal 1">
         </a>
-        <a href="https://www.nbcnews.com/news/world/pesto-chonky-australian-penguin-chick-captivates-katy-perry-internet-rcna172974#:~:text=Chocolate-brown%20and%20fluffy%2C%20Pesto,for%20Pesto%20since%20he%20hatched" class="animal" id="animal2">
+
+        <!-- Pesto the Penguin -->
+        <a href="https://www.nbcnews.com/news/world/pesto-chonky-australian-penguin-chick-captivates-katy-perry-internet-rcna172974#:~:text=Chocolate-brown%20and%20fluffy%2C%20Pesto,for%20Pesto%20since%20he%20hatched" class="animal" id="animal2" onclick="return openPopup('https://www.nbcnews.com/news/world/pesto-chonky-australian-penguin-chick-captivates-katy-perry-internet-rcna172974#:~:text=Chocolate-brown%20and%20fluffy%2C%20Pesto,for%20Pesto%20since%20he%20hatched');">
             <img src="pesto.png" alt="Crypto Animal 2">
         </a>
-        <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed" class="animal" id="animal3">
+
+        <!-- YouTube Zoo Video -->
+        <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed" class="animal" id="animal3" onclick="return openPopup('https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed');">
             <img src="zoo.png" alt="Crypto Animal 3">
         </a>
-        <a href="https://elefanten-fotolexikon.eu/profile/asia/thailand/chonburi-khao-kheow-open-zoo/san-dow-pang-saen-daw/" class="animal" id="animal4">
+
+        <!-- San Dow Pang -->
+        <a href="https://elefanten-fotolexikon.eu/profile/asia/thailand/chonburi-khao-kheow-open-zoo/san-dow-pang-saen-daw/" class="animal" id="animal4" onclick="return openPopup('https://elefanten-fotolexikon.eu/profile/asia/thailand/chonburi-khao-kheow-open-zoo/san-dow-pang-saen-daw/');">
             <img src="awd.png" alt="Crypto Animal 4">
         </a>
-        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=322&c_id=" class="animal" id="animal5">
+
+        <!-- Zebra -->
+        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=322&c_id=" class="animal" id="animal5" onclick="return openPopup('https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=322&c_id=');">
             <img src="zebra.png" alt="Crypto Animal 5">
         </a>
-        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=392&c_id=" class="animal" id="animal6">
+
+        <!-- Capybara -->
+        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=392&c_id=" class="animal" id="animal6" onclick="return openPopup('https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=392&c_id=');">
             <img src="capy.png" alt="Crypto Animal 6">
         </a>
-        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=541&c_id=" class="animal" id="animal7">
+
+        <!-- Sloth -->
+        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=541&c_id=" class="animal" id="animal7" onclick="return openPopup('https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=541&c_id=');">
             <img src="sloth.png" alt="Crypto Animal 7">
         </a>
-        <!-- Add more animals as needed -->
     </div>
 </body>
 </html>
