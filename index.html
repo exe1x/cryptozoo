@@ -30,14 +30,25 @@
             position: relative; /* Set relative to position child elements inside */
             padding: 20px;
             text-align: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6));
+    padding: 20px;
+    text-align: center;
+    color: white;
+    font-family: 'Fredericka the Great', cursive;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
         }
 
 
         h1 {
-            position: relative; /* Set relative to place it above the image */
-            font-size: 3rem;
-            color: #2c3e50;
-            z-index: 1; /* Ensure it's above the image */
+            font-size: 3em;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
         }
 
         .zoo-container {
@@ -95,6 +106,7 @@
             transform: translate(-50%, -50%);
             text-align: center;
             z-index: 100; /* Keep it above other elements */
+            font-family: 'Fredericka the Great', cursive;
         }
 
         .social-section h1 {
@@ -150,6 +162,18 @@
             #animal6 { top: 20vh; right: 60vw; }
             #animal7 { top: 5vh; right: 60vw; }
         }
+
+        .animal-image {
+    position: absolute; 
+    top: -25px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 1001; 
+    width: 500px; 
+    z-index: 1; 
+    opacity: 0.8;
+    height: auto;
+}
     </style>
 </head>
 <body>
@@ -193,7 +217,7 @@
 
     <!-- Social Section -->
     <div class="social-section" id="social-section">
-        <h1>Social</h1>
+        <h1>Socials</h1>
         <div class="social-circle">
             <a href="https://telegram.org" target="_blank">
                 <img src="tg.svg" alt="Telegram">
