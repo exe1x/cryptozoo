@@ -51,40 +51,158 @@ h1 {
 
 /* Animal 1 - Set custom size */
 #animal1 img {
-    width: 250px; /* Set specific width for animal 1 */
+    width: 20vw; /* Set width based on viewport width */
 }
 #animal1 {
-    top: 540px;
-    left: 1100px;
+    top: 70vh; /* Set position based on viewport height */
+    left: 80vw; /* Use relative units */
 }
 
 /* Animal 2 - Set custom size */
 #animal2 img {
-    width: 200px; /* Set specific width for animal 2 */
+    width: 15vw;
 }
 #animal2 {
-    top: 250px;
-    right: 425px;
+    top: 30vh;
+    right: 28vw;
 }
 
-/* Add more #animalX IDs, sizes, and positions for other animals */
+/* Animal 3 (Centered) */
 #animal3 img {
-    width: 350px; /* Set specific width for animal 2 */
+    width: 22vw;
     transition: transform 0.3s ease;
 }
 #animal3 {
-    top: 73%;
-    left: 50%;
+    top: 76vh;
+    left: 50vw;
     transform: translate(-50%, -50%);
 }
-#animal3:hover img {
-    transform: scale(1.1);
-}
 
+/* Animal 4 */
 #animal4 img {
-    width: 250px; /* Set specific width for animal 2 */
+    width: 18vw;
 }
 #animal4 {
-    top: 530px;
-    right: 1250px;
+    top: 68vh;
+    right: 80vw;
+}
+
+/* Animal 5 */
+#animal5 img {
+    width: 14vw;
+}
+#animal5 {
+    top: 46vh;
+    right: 13vw;
+}
+
+/* Animal 6 */
+#animal6 img {
+    width: 14vw
+}
+#animal6 {
+    top: 31vh;
+    right: 89vw;
+}
+
+/* Animal 7 */
+#animal7 img {
+    width: 14vw;
+}
+#animal7 {
+    top: 5vh;
+    right: 87vw;
+}
+
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    /* Reduce image sizes for smaller screens */
+    .animal img {
+        width: 15vw;
+    }
+
+    /* Adjust animal positioning */
+    #animal1 {
+        top: 60vh;
+        left: 60vw;
+    }
+
+    #animal2 {
+        top: 30vh;
+        right: 50vw;
+    }
+
+    #animal3 {
+        top: 65vh;
+    }
+
+    #animal4 {
+        top: 65vh;
+        right: 60vw;
+    }
+
+    #animal5 {
+        top: 40vh;
+        right: 15vw;
+    }
+
+    #animal6 {
+        top: 25vh;
+        right: 70vw;
+    }
+
+    #animal7 {
+        top: 8vh;
+        right: 70vw;
+    }
+}
+
+/* Media Queries for Extra Small Screens */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .animal img {
+        width: 25vw; /* Make animals smaller */
+    }
+
+    /* Adjust animal positioning for very small screens */
+    #animal1 {
+        top: 50vh;
+        left: 50vw;
+    }
+
+    #animal2 {
+        top: 25vh;
+        right: 40vw;
+    }
+
+    #animal3 {
+        top: 55vh;
+    }
+
+    #animal4 {
+        top: 55vh;
+        right: 50vw;
+    }
+
+    #animal5 {
+        top: 35vh;
+        right: 10vw;
+    }
+
+    #animal6 {
+        top: 20vh;
+        right: 60vw;
+    }
+
+    #animal7 {
+        top: 5vh;
+        right: 60vw;
+    }
 }
