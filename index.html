@@ -4,52 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Me At The Zoo</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="zoo.png" type="image/png">
 
-    <script>
-        // Function to open links in a pop-up window
-        function openPopup(url) {
-            window.open(url, 'popup', 'width=600,height=600,scrollbars=yes,resizable=yes');
-            return false;  // Prevent default link behavior
+    <style>
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </script>
+
+        /* General styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('safari.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            overflow: hidden; /* Prevent page scrolling */
+            color: #333;
+            text-align: center;
+        }
+
+        header {
+            background-color: rgba(255, 255, 255, 0.5);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .zoo-container {
+            position: relative;
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            transition: filter 0.5s ease; /* Smooth transition for blur */
+        }
+
+        /* Blur class */
+        .blur {
+            filter: blur(5px); /* Apply blur effect */
+        }
+
+        /* Position each animal on the page */
+        .animal {
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        /* Default hover effect for all animals */
+        .animal:hover {
+            transform: scale(1.1);
+        }
+
+        /* Specific image size and position for each animal */
+        #animal1 img { width: 20vw; }
+        #animal1 { top: 70vh; left: 80vw; }
+
+        #animal2 img { width: 15vw; }
+        #animal2 { top: 30vh; right: 28vw; }
+
+        #animal3 img { width: 22vw; }
+        #animal3 { top: 57vh; left: 40vw; }
+
+        #animal4 img { width: 18vw; }
+        #animal4 { top: 68vh; right: 80vw; }
+
+        #animal5 img { width: 14vw; }
+        #animal5 { top: 46vh; right: 13vw; }
+
+        #animal6 img { width: 14vw; }
+        #animal6 { top: 31vh; right: 89vw; }
+
+        #animal7 img { width: 14vw; }
+        #animal7 { top: 5vh; right: 87vw; }
+
+        /* Social Section Styling */
+        .social-section {
+            display: none; /* Hidden initially */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 100; /* Keep it above other elements */
+        }
+
+        .social-section h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .social-circle {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .social-circle img {
+            width: 40px;
+            height: 40px;
+        }
+
+        .social-circle:hover {
+            transform: scale(1.2);
+        }
+
+        /* Media Queries for Smaller Screens */
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .animal img { width: 15vw; }
+
+            #animal1 { top: 60vh; left: 60vw; }
+            #animal2 { top: 30vh; right: 50vw; }
+            #animal3 { top: 65vh; }
+            #animal4 { top: 65vh; right: 60vw; }
+            #animal5 { top: 40vh; right: 15vw; }
+            #animal6 { top: 25vh; right: 70vw; }
+            #animal7 { top: 8vh; right: 70vw; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 1.5rem; }
+            .animal img { width: 25vw; }
+
+            #animal1 { top: 50vh; left: 50vw; }
+            #animal2 { top: 25vh; right: 40vw; }
+            #animal3 { top: 55vh; }
+            #animal4 { top: 55vh; right: 50vw; }
+            #animal5 { top: 35vh; right: 10vw; }
+            #animal6 { top: 20vh; right: 60vw; }
+            #animal7 { top: 5vh; right: 60vw; }
+        }
+    </style>
 </head>
 <body>
     <header>
+        <!-- Animal image behind the text -->
+        <img src="animal.png" alt="Animal Image" class="animal-image">
         <h1>Me At The Zoo</h1>
     </header>
 
     <div class="zoo-container">
         <!-- Moo Deng -->
-        <a href="https://en.wikipedia.org/wiki/Moo_Deng" class="animal" id="animal1" onclick="return openPopup('https://en.wikipedia.org/wiki/Moo_Deng');">
+        <a href="https://en.wikipedia.org/wiki/Moo_Deng" class="animal" id="animal1">
             <img src="moodeng.png" alt="Crypto Animal 1">
         </a>
 
         <!-- Pesto the Penguin -->
-        <a href="https://www.nbcnews.com/news/world/pesto-chonky-australian-penguin-chick-captivates-katy-perry-internet-rcna172974#:~:text=Chocolate-brown%20and%20fluffy%2C%20Pesto,for%20Pesto%20since%20he%20hatched" class="animal" id="animal2" onclick="return openPopup('https://www.nbcnews.com/news/world/pesto-chonky-australian-penguin-chick-captivates-katy-perry-internet-rcna172974#:~:text=Chocolate-brown%20and%20fluffy%2C%20Pesto,for%20Pesto%20since%20he%20hatched');">
+        <a href="https://www.nbcnews.com/news/world/pesto-chonky-australian-penguin-chick-captivates-katy-perry-internet-rcna172974#:~:text=Chocolate-brown%20and%20fluffy%2C%20Pesto,for%20Pesto%20since%20he%20hatched" class="animal" id="animal2">
             <img src="pesto.png" alt="Crypto Animal 2">
         </a>
 
         <!-- YouTube Zoo Video -->
-        <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed" class="animal" id="animal3" onclick="return openPopup('https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed');">
+        <a href="https://www.youtube.com/watch?v=jNQXAC9IVRw&ab_channel=jawed" class="animal" id="animal3">
             <img src="zoo.png" alt="Crypto Animal 3">
         </a>
 
         <!-- San Dow Pang -->
-        <a href="https://elefanten-fotolexikon.eu/profile/asia/thailand/chonburi-khao-kheow-open-zoo/san-dow-pang-saen-daw/" class="animal" id="animal4" onclick="return openPopup('https://elefanten-fotolexikon.eu/profile/asia/thailand/chonburi-khao-kheow-open-zoo/san-dow-pang-saen-daw/');">
+        <a href="https://elefanten-fotolexikon.eu/profile/asia/thailand/chonburi-khao-kheow-open-zoo/san-dow-pang-saen-daw/" class="animal" id="animal4">
             <img src="awd.png" alt="Crypto Animal 4">
         </a>
 
         <!-- Capybara -->
-        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=392&c_id=" class="animal" id="animal6" onclick="return openPopup('https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=392&c_id=');">
+        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=392&c_id=" class="animal" id="animal6">
             <img src="capy.png" alt="Crypto Animal 6">
         </a>
 
         <!-- Sloth -->
-        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=541&c_id=" class="animal" id="animal7" onclick="return openPopup('https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=541&c_id=');">
+        <a href="https://khaokheow.zoothailand.org/en/animal_view.php?detail_id=541&c_id=" class="animal" id="animal7">
             <img src="sloth.png" alt="Crypto Animal 7">
         </a>
     </div>
+
+    <!-- Social Section -->
+    <div class="social-section" id="social-section">
+        <h1>Socials</h1>
+        <div class="social-circle">
+            <a href="https://telegram.org" target="_blank">
+                <img src="tg.svg" alt="Telegram">
+            </a>
+        </div>
+        <div class="social-circle">
+            <a href="https://twitter.com" target="_blank">
+                <img src="x.svg" alt="Twitter">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        let isBlurred = false;
+
+        // Listen for mouse wheel event to trigger blur
+        document.addEventListener('wheel', function(event) {
+            const zooContainer = document.querySelector('.zoo-container');
+            const socialSection = document.getElementById('social-section');
+
+            if (event.deltaY > 0) { // Scrolling down
+                zooContainer.classList.add('blur');
+                socialSection.style.display = 'block'; // Show the social section
+                isBlurred = true;
+            } else if (event.deltaY < 0) { // Scrolling up
+                zooContainer.classList.remove('blur');
+                socialSection.style.display = 'none'; // Hide the social section
+                isBlurred = false;
+            }
+
+            // Prevent actual scrolling from happening
+            event.preventDefault();
+        }, { passive: false });  // The passive option ensures we can call preventDefault
+    </script>
 </body>
 </html>
